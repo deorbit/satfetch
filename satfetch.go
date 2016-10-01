@@ -132,8 +132,8 @@ type SatcatRow struct {
 }
 
 // FetchAllTLEs fetches the TLEs for the satellites in the gven satcatRows.
-// The TLEs will be placed in .tle files, one for each satellite. Existing files
-// that match satellites in the given SATCAT will be overridden.
+// The TLEs will be placed in .tle files, one for each satellite. If a file
+// for a NORAD ID exists in destDir, that satellite will be skipped.
 func FetchTLEsForSATCAT(satcatRows []SatcatRow, startRow int, numToFetch int, destDir string) {
 	var noradIDQuery string
 	var noradIDs []string
