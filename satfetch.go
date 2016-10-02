@@ -197,7 +197,7 @@ func FetchTLEsForSATCAT(satcatRows []SatcatRow, startRow int, numToFetch int, de
 	}
 }
 
-// TLELine1 represents the first line of a standard two-line element set
+// TLE represents a standard two-line element set
 type TLE struct {
 	NORADID         uint64  `json:"noradid"`
 	Classification  string  `json:"classification"`
